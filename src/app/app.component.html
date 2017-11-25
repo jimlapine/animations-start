@@ -8,7 +8,9 @@
         (click)="onShrink()">Shrink!</button>
       <hr>
       <div style="width: 100px; height: 100px;"
-        [@divState]="state">
+        [@divState]="state"
+        (@divState.start)="animationStarted($event)"
+        (@divState.done)="animationDone($event)">
       </div>
       <hr>
       <div style="width: 100px; height: 100px;"
